@@ -1,0 +1,106 @@
+\begin{header}
+    \fontsize{25pt}{25pt}\selectfont \ResumeName
+
+    \vspace{5pt}
+
+    \normalsize
+    \ifdefined\ResumeEmail
+        \mbox{\hrefWithoutArrow{mailto:\ResumeEmail}{\ResumeEmail}}\\
+    \fi
+    \mbox{\ResumeLocation}%
+    \ifdefined\ResumePhone
+        \ResumeContactSep\mbox{\ResumePhone}%
+    \fi
+    \ResumeContactSep\mbox{\hrefWithoutArrow{https://\ResumeLinkedIn}{\ResumeLinkedIn}}%
+    \ResumeContactSep\mbox{\hrefWithoutArrow{https://\ResumeGitHub}{\ResumeGitHub}}%
+\end{header}
+
+\vspace{4pt}
+
+\section{Summary}
+Aerospace engineer with a PhD in Aerospace Engineering from Georgia Tech, focused on computational modeling, structural and thermal finite-element analysis, and multidisciplinary design optimization. Experience at NASA Glenn Research Center includes structural and thermal analysis, battery pack thermal management, hybrid-electric propulsion modeling, and modernization of NASA’s Chemical Equilibrium with Applications software. Strong background in developing validated engineering tools, high-performance analysis workflows, and open-source research software.
+
+\section{Education}
+\begin{threecolentry}{\textbf{Georgia Institute of Technology}}{August 2021}
+    PhD, Aerospace Engineering
+    \begin{highlights}
+        \item Thesis: \href{http://hdl.handle.net/1853/65093}{\textit{Stress-Based Topology Optimization for Steady-State and Transient Thermoelastic Design}}
+    \end{highlights}
+\end{threecolentry}
+
+\begin{threecolentry}{}{May 2018}
+    MS, Aerospace Engineering
+\end{threecolentry}
+
+\begin{threecolentry}{\textbf{The University of Texas at Austin}}{May 2016}
+    BS, Aerospace Engineering
+\end{threecolentry}
+
+\section{Experience}
+\textbf{NASA Glenn Research Center}
+\begin{twocolentry}{June 2022 -- Present}
+    Aerospace Engineer -- Cleveland, OH
+\end{twocolentry}
+
+\underline{Battery Pack Thermal Analysis and Hybrid-Electric Propulsion:}
+\begin{onecolentry}
+    \begin{highlights}
+        \item Developed a hybrid-electric propulsion analysis model coupling time-varying battery cell-discharge and electric motor simulations, enabling aircraft-level optimization studies for reduced climb fuel consumption.
+        \item Implemented phase-change material constitutive modeling in \href{https://github.com/smdogroup/tacs}{TACS} for transient battery pack finite-element simulations, enabling evaluation of passive thermal management strategies.
+        \item Developed a two-way, time-resolved coupling framework for battery pack shape optimization, integrating transient finite-element heat transfer with cell-discharge models.
+    \end{highlights}
+\end{onecolentry}
+
+\underline{Modernization of Chemical Equilibrium with Applications \href{https://github.com/nasa/cea}{CEA}:}
+\begin{onecolentry}
+    \begin{highlights}
+        \item Led modernization of NASA’s Chemical Equilibrium with Applications software, refactoring a legacy Fortran codebase into a modern, maintainable scientific software package for rocket, shock, and detonation analysis.
+        \item Led public open-source release preparation for NASA CEA, including validation workflows, interface documentation, packaging improvements, and repository maintenance.
+        \item Maintain NASA's open-source CEA repository, managing public releases, user-facing interfaces, validation updates, and long-term software modernization.
+        \item Developed C, Python, and MATLAB interfaces to the Fortran computational core, enabling CEA integration with modern analysis, optimization, and scripting workflows.
+        \item Optimized the Python interface to execute more than 100,000 equilibrium calculations in under 2 seconds, supporting high-throughput design and optimization workflows.
+        \item Developed analytic derivative capabilities for equilibrium thermodynamic outputs, enabling gradient-based integration of CEA into multidisciplinary design optimization workflows.
+    \end{highlights}
+\end{onecolentry}
+
+\vspace{0.2cm}
+
+\textbf{Peerless Technologies}
+\begin{twocolentry}{June 2021 -- June 2022}
+    Aerospace Engineer (Contractor at NASA GRC) -- Cleveland, OH
+\end{twocolentry}
+
+\vspace{0.10cm}
+\begin{onecolentry}
+    \begin{highlights}
+        \item Developed propeller optimization capabilities using GXBeam.jl and automatic differentiation, enabling coupled structural and acoustic analysis of design concepts.
+        \item Conducted transient finite-element heat-conduction analyses to predict battery temperatures during thermal runaway, achieving strong agreement with experimental test data.
+        \item Implemented transient heat-conduction analysis capabilities in the open-source \href{https://github.com/OpenMDAO/mphys}{MPhys} framework using the \href{https://github.com/smdogroup/tacs}{TACS} finite-element solver.
+    \end{highlights}
+\end{onecolentry}
+
+\section{Selected Publications}
+\begin{onecolentry}
+    \begin{highlights}
+      \item Psenica, C., Fang, L., Zoppelt, S., \textbf{Leader, M.K.}, and He, P., A Modular Conjugate Heat Transfer Optimization Framework for Thermal Management of Electric Aircraft. \textit{International Journal of Heat and Mass Transfer}, 259:128345, 2026.
+      \item \textbf{Leader, M.K.}, Battery Pack Shape Optimization Using Transient Heat Conduction Coupled with Cell-Discharge Analysis. \textit{AIAA SCITECH 2025 Forum}, Orlando, FL, 2025. doi:\href{https://arc.aiaa.org/doi/abs/10.2514/6.2025-0361}{10.2514/6.2025-0361}. AIAA 2025-0361.
+      \item \textbf{Leader, M.K.}, Aretskin-Hariton, E., and Moore, K.T., Multidisciplinary Optimization of a Transonic Truss Braced Wing Aircraft with Hybrid-Electric Propulsion. \textit{AIAA AVIATION Forum and ASCEND 2024}, Las Vegas, NV, 2024. doi:\href{https://arc.aiaa.org/doi/abs/10.2514/6.2024-4294}{10.2514/6.2024-4294}. AIAA 2024-4294.
+      \item \textbf{Leader, M.K.}, Lavelle, T.M., Wang, X.J., Dickens, K.W., McTague, M., and Hill, J.P., CEA2022: A Modernization of NASA Glenn's Software CEA (Chemical Equilibrium with Applications). \textit{Thermal and Fluids Analysis Workshop (TFAWS) 2024}, Cleveland, OH, 2024. \href{https://ntrs.nasa.gov/citations/20240009728}{NASA NTRS}.
+      \item \textbf{Leader, M.K.} and Kennedy, G.J., Thermoelastic Topology Optimization Using Steady-State and Transient Analysis for Stress and Thermal Performance. \textit{AIAA SciTech 2021 Forum}, Virtual, 2021. doi:\href{https://arc.aiaa.org/doi/abs/10.2514/6.2021-1895}{10.2514/6.2021-1895}. AIAA 2021-1895.
+      \item \textbf{Leader, M.K.}, Chin, T.W., and Kennedy, G.J., High-Resolution Topology Optimization with Stress and Natural Frequency Constraints. \textit{AIAA Journal}, 2019. doi:\href{https://arc.aiaa.org/doi/10.2514/1.J057777}{10.2514/1.J057777}.
+      \item Chin, T.W., \textbf{Leader, M.K.}, and Kennedy, G.J., A Scalable Framework for Large-Scale 3D Multimaterial Topology Optimization with Octree-Based Mesh Adaptation. \textit{Advances in Engineering Software}, 2019. doi:\href{https://www.sciencedirect.com/science/article/abs/pii/S0965997818309682}{10.1016/j.advengsoft.2019.05.004}.
+    \end{highlights}
+\end{onecolentry}
+
+\section{Skills}
+\begin{onecolentry}
+    \textbf{Methods:} Finite-element analysis (FEA), transient heat transfer, structural dynamics, buckling analysis, topology optimization, shape optimization, multidisciplinary design optimization (MDAO), chemical equilibrium analysis, high-performance computing (HPC)
+\end{onecolentry}
+
+\begin{onecolentry}
+    \textbf{Programming:} Python, Fortran, C, C++, MATLAB, Julia, Bash, Perl, Cython
+\end{onecolentry}
+
+\begin{onecolentry}
+    \textbf{Software and frameworks:} \href{https://github.com/OpenMDAO/OpenMDAO}{OpenMDAO}, \href{https://github.com/smdogroup/tacs}{TACS}, git, MPI, Nastran, Femap, SolidWorks, NX CAD
+\end{onecolentry}

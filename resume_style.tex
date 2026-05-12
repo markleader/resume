@@ -1,0 +1,95 @@
+\usepackage[
+    ignoreheadfoot,
+    top=2cm,
+    bottom=2cm,
+    left=2cm,
+    right=2cm,
+    footskip=1cm
+]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage[dvipsnames]{xcolor}
+\definecolor{primaryColor}{RGB}{0, 0, 0}
+\usepackage[
+    colorlinks=true,
+    urlcolor=primaryColor,
+    pageanchor=false
+]{hyperref}
+\usepackage{changepage}
+\usepackage{paracol}
+\usepackage{needspace}
+\usepackage{iftex}
+
+\ifPDFTeX
+    \input{glyphtounicode}
+    \pdfgentounicode=1
+    \usepackage[T1]{fontenc}
+    \usepackage[utf8]{inputenc}
+    \usepackage{lmodern}
+\fi
+
+\usepackage{charter}
+
+\raggedright
+\AtBeginEnvironment{adjustwidth}{\partopsep0pt}
+\pagestyle{empty}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\topskip}{0pt}
+\setlength{\columnsep}{0.15cm}
+\pagenumbering{gobble}
+
+\titleformat{\section}{\needspace{4\baselineskip}\bfseries\large}{}{0pt}{}[\vspace{1pt}\titlerule]
+\titlespacing{\section}{-1pt}{0.3cm}{0.2cm}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\small$\bullet$}}$}
+
+\newenvironment{highlights}{
+    \begin{itemize}[
+        topsep=0.10cm,
+        parsep=0.10cm,
+        partopsep=0pt,
+        itemsep=0pt,
+        leftmargin=10pt
+    ]
+}{
+    \end{itemize}
+}
+
+\newenvironment{onecolentry}{
+    \begin{adjustwidth}{0.00001cm}{0.00001cm}
+}{
+    \end{adjustwidth}
+}
+
+\newenvironment{twocolentry}[1]{
+    \onecolentry
+    \def\secondColumn{#1}
+    \setcolumnwidth{\fill, 4.4cm}
+    \begin{paracol}{2}
+}{
+    \switchcolumn \raggedleft \secondColumn
+    \end{paracol}
+    \endonecolentry
+}
+
+\newenvironment{threecolentry}[2]{
+    \onecolentry
+    \def\thirdColumn{#2}
+    \setcolumnwidth{5.7cm, \fill, 2.3cm}
+    \begin{paracol}{3}
+    {\raggedright #1} \switchcolumn
+}{
+    \switchcolumn \raggedleft \thirdColumn
+    \end{paracol}
+    \endonecolentry
+}
+
+\newenvironment{header}{
+    \setlength{\topsep}{0pt}\par\kern\topsep\centering\linespread{1.5}
+}{
+    \par\kern\topsep
+}
+
+\let\hrefWithoutArrow\href
+\newcommand{\ResumeContactSep}{\kern 5pt\textbar\kern 5pt}

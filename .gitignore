@@ -1,0 +1,17 @@
+contact_full.tex
+resume_full.pdf
+
+# LaTeX build artifacts
+*.aux
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz
+
+# macOS / editor files
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*.swo
